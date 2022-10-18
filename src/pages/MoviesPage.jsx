@@ -65,7 +65,7 @@ const MoviesPage = () => {
         <input type="text" value={query} onChange={handlChange}></input>
         <button type="submit">Search</button>
       </form>
-      {movies && <MoviesList movies={movies} url={' '} location={location} />}
+      {movies && <MoviesList movies={movies} location={location} />}
     </>
   );
 };

@@ -8,6 +8,7 @@ export const StyledLink = styled(NavLink)`
   font-weight: 500;
   color: #2a363b;
   font-size: 18px;
+
   &.active {
     border-radius: 20%;
     background-color: #9d0ceb;

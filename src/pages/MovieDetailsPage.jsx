@@ -15,6 +15,8 @@ const MoviesDetailsPage = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
+  console.log(movieId);
+
   useEffect(() => {
     (async function detailsFilm() {
       try {

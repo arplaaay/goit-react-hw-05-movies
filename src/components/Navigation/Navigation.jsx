@@ -1,9 +1,11 @@
-import { StyledLink } from './Navigation.styles';
+import { StyledLink } from './Navigation.styled';
 
 export const Navigation = () => {
   return (
     <nav>
-      <StyledLink to="/">Home</StyledLink>
+      <StyledLink to="/" end>
+        Home
+      </StyledLink>
       <StyledLink to="/movies">Movies</StyledLink>
     </nav>
   );

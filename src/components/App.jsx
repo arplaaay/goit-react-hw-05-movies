@@ -14,27 +14,22 @@ const MoviesPage = lazy(() => import('../pages/MoviesPage'));
 const MoviesDetailsPage = lazy(() => import('../pages/MovieDetailsPage'));
 const NotFoundPage = lazy(() => import('../pages/NotFoundPage'));
 
-// import { AppBar } from './AppBar/AppBar';
-// import { Homepage } from 'pages/HomePage';
-// import { MoviesPage } from '../pages/MoviesPage';
-// import { MoviesDetailsPage } from 'pages/MovieDetailsPage';
-// import { NotFoundPage } from 'pages/NotFoundPage';
-
 export const App = () => {
   return (
     <>
       <AppGlobalStyles />
 
       <Suspense fallback={<Loader />}>
+        <AppBar />
         <Routes>
-          <Route path="/" element={<AppBar />}>
-            <Route index element={<Homepage />} />
-            <Route path="/movies" element={<MoviesPage />} />
-            <Route path="movies/:movieId" element={<MoviesDetailsPage />}>
-              <Route path="cast" element={<Cast />} />
-              <Route path="reviews" element={<Reviews />} />
-            </Route>
+          <Route path="/" element={<Homepage />} />
+          <Route path="/movies" element={<MoviesPage />} />
+
+          <Route path="movies/:movieId" element={<MoviesDetailsPage />}>
+            <Route path="cast" element={<Cast />} />
+            <Route path="reviews" element={<Reviews />} />
           </Route>
+
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </Suspense>
